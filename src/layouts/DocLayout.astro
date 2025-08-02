@@ -1,0 +1,30 @@
+---
+// Documentation layout with sidebar and navigation
+import BaseLayout from './BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Sidebar from '../components/Sidebar.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+  currentPath?: string;
+}
+
+const { title, description, currentPath } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <Navbar />
+  
+  <div class="flex pt-16">
+    <Sidebar currentPath={currentPath} />
+    
+    <main class="flex-1 bg-white min-h-screen">
+      <div class="max-w-4xl mx-auto px-8 py-12">
+        <article class="prose prose-lg max-w-none">
+          <slot />
+        </article>
+      </div>
+    </main>
+  </div>
+</BaseLayout>

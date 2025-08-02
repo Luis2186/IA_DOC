@@ -1,0 +1,180 @@
+---
+// Sidebar component for navigation
+export interface Props {
+  currentPath?: string;
+}
+
+const { currentPath } = Astro.props;
+---
+
+<aside class="w-64 bg-gray-50 h-screen overflow-y-auto border-r border-gray-200 sticky top-16">
+  <div class="p-6">
+    <div class="space-y-8">
+      
+      <div class="sidebar-section">
+        <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-3">Fundamentos</h3>
+        <ul class="space-y-1">
+          <li>
+            <a href="/fundamentos/que-es-la-ia" 
+               class={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                 currentPath === '/fundamentos/que-es-la-ia' 
+                 ? 'bg-blue-100 text-blue-800 font-medium' 
+                 : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+               }`}>
+              ¿Qué es la IA?
+            </a>
+          </li>
+          <li>
+            <a href="/fundamentos/historia" 
+               class={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                 currentPath === '/fundamentos/historia' 
+                 ? 'bg-blue-100 text-blue-800 font-medium' 
+                 : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+               }`}>
+              Historia
+            </a>
+          </li>
+          <li>
+            <a href="/fundamentos/ramas" 
+               class={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                 currentPath === '/fundamentos/ramas' 
+                 ? 'bg-blue-100 text-blue-800 font-medium' 
+                 : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+               }`}>
+              Ramas
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-3">Machine Learning</h3>
+        <ul class="space-y-1">
+          <li>
+            <a href="/machine-learning/introduccion" 
+               class={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                 currentPath === '/machine-learning/introduccion' 
+                 ? 'bg-blue-100 text-blue-800 font-medium' 
+                 : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+               }`}>
+              Introducción
+            </a>
+          </li>
+          <li>
+            <a href="/machine-learning/ciclo-de-vida" 
+               class={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                 currentPath === '/machine-learning/ciclo-de-vida' 
+                 ? 'bg-blue-100 text-blue-800 font-medium' 
+                 : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+               }`}>
+              Ciclo de Vida
+            </a>
+          </li>
+          <li>
+            <a href="/machine-learning/integracion-en-software" 
+               class={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                 currentPath === '/machine-learning/integracion-en-software' 
+                 ? 'bg-blue-100 text-blue-800 font-medium' 
+                 : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+               }`}>
+              Integración en Software
+            </a>
+          </li>
+          <li>
+            <a href="/machine-learning/ejemplos" 
+               class={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                 currentPath === '/machine-learning/ejemplos' 
+                 ? 'bg-blue-100 text-blue-800 font-medium' 
+                 : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+               }`}>
+              Ejemplos
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-3">Deep Learning</h3>
+        <ul class="space-y-1">
+          <li>
+            <a href="/deep-learning/arquitecturas" 
+               class={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                 currentPath === '/deep-learning/arquitecturas' 
+                 ? 'bg-blue-100 text-blue-800 font-medium' 
+                 : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+               }`}>
+              Arquitecturas
+            </a>
+          </li>
+          <li>
+            <a href="/deep-learning/transformers" 
+               class={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                 currentPath === '/deep-learning/transformers' 
+                 ? 'bg-blue-100 text-blue-800 font-medium' 
+                 : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+               }`}>
+              Transformers
+            </a>
+          </li>
+          <li>
+            <a href="/deep-learning/llms" 
+               class={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                 currentPath === '/deep-learning/llms' 
+                 ? 'bg-blue-100 text-blue-800 font-medium' 
+                 : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+               }`}>
+              LLMs
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-3">NLP</h3>
+        <ul class="space-y-1">
+          <li>
+            <a href="/nlp/introduccion" 
+               class={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                 currentPath === '/nlp/introduccion' 
+                 ? 'bg-blue-100 text-blue-800 font-medium' 
+                 : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+               }`}>
+              Introducción
+            </a>
+          </li>
+          <li>
+            <a href="/nlp/embeddings" 
+               class={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                 currentPath === '/nlp/embeddings' 
+                 ? 'bg-blue-100 text-blue-800 font-medium' 
+                 : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+               }`}>
+              Embeddings
+            </a>
+          </li>
+          <li>
+            <a href="/nlp/rag" 
+               class={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                 currentPath === '/nlp/rag' 
+                 ? 'bg-blue-100 text-blue-800 font-medium' 
+                 : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+               }`}>
+              RAG
+            </a>
+          </li>
+          <li>
+            <a href="/nlp/chatbots" 
+               class={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                 currentPath === '/nlp/chatbots' 
+                 ? 'bg-blue-100 text-blue-800 font-medium' 
+                 : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+               }`}>
+              Chatbots
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</aside>

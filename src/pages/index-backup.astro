@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Documentación de Inteligencia Artificial" description="Guía completa de IA, Machine Learning, Deep Learning y NLP">
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
+          Documentación de <span class="text-blue-200">Inteligencia Artificial</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+          Aprende todo sobre IA, Machine Learning, Deep Learning y Procesamiento de Lenguaje Natural con ejemplos prácticos y explicaciones detalladas.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/fundamentos/que-es-la-ia" 
+             class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+            Comenzar a Aprender
+          </a>
+          <a href="/machine-learning/introduccion" 
+             class="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            Ir a Machine Learning
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Sections -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Explora Nuestros Temas</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Desde conceptos fundamentales hasta aplicaciones avanzadas, encuentra todo lo que necesitas saber sobre IA.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Fundamentos -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 hover:shadow-xl transition-shadow">
+          <div class="text-center mb-4">
+            <div class="w-12 h-12 mx-auto bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <span class="text-2xl">🧠</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Fundamentos</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Conceptos básicos, historia y ramas principales de la inteligencia artificial.</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/fundamentos/que-es-la-ia" class="text-blue-600 hover:text-blue-800 hover:underline">¿Qué es la IA?</a></li>
+            <li><a href="/fundamentos/historia" class="text-blue-600 hover:text-blue-800 hover:underline">Historia de la IA</a></li>
+            <li><a href="/fundamentos/ramas" class="text-blue-600 hover:text-blue-800 hover:underline">Ramas principales</a></li>
+          </ul>
+        </div>
+
+        <!-- Machine Learning -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 hover:shadow-xl transition-shadow">
+          <div class="text-center mb-4">
+            <div class="w-12 h-12 mx-auto bg-green-100 rounded-lg flex items-center justify-center mb-4">
+              <span class="text-2xl">⚙️</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Machine Learning</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Algoritmos de aprendizaje automático, implementación y casos de uso prácticos.</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/machine-learning/introduccion" class="text-blue-600 hover:text-blue-800 hover:underline">Introducción</a></li>
+            <li><a href="/machine-learning/ciclo-de-vida" class="text-blue-600 hover:text-blue-800 hover:underline">Ciclo de vida</a></li>
+            <li><a href="/machine-learning/ejemplos" class="text-blue-600 hover:text-blue-800 hover:underline">Ejemplos prácticos</a></li>
+          </ul>
+        </div>
+
+        <!-- Deep Learning -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 hover:shadow-xl transition-shadow">
+          <div class="text-center mb-4">
+            <div class="w-12 h-12 mx-auto bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+              <span class="text-2xl">🔥</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Deep Learning</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Redes neuronales profundas, transformers y modelos de lenguaje grandes.</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/deep-learning/arquitecturas" class="text-blue-600 hover:text-blue-800 hover:underline">Arquitecturas</a></li>
+            <li><a href="/deep-learning/transformers" class="text-blue-600 hover:text-blue-800 hover:underline">Transformers</a></li>
+            <li><a href="/deep-learning/llms" class="text-blue-600 hover:text-blue-800 hover:underline">LLMs</a></li>
+          </ul>
+        </div>
+
+        <!-- NLP -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 hover:shadow-xl transition-shadow">
+          <div class="text-center mb-4">
+            <div class="w-12 h-12 mx-auto bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+              <span class="text-2xl">💬</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">NLP</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Procesamiento de lenguaje natural, embeddings, RAG y desarrollo de chatbots.</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/nlp/introduccion" class="text-blue-600 hover:text-blue-800 hover:underline">Introducción</a></li>
+            <li><a href="/nlp/embeddings" class="text-blue-600 hover:text-blue-800 hover:underline">Embeddings</a></li>
+            <li><a href="/nlp/rag" class="text-blue-600 hover:text-blue-800 hover:underline">RAG</a></li>
+            <li><a href="/nlp/chatbots" class="text-blue-600 hover:text-blue-800 hover:underline">Chatbots</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Contenido Destacado</h2>
+        <p class="text-lg text-gray-600">Lo mejor de nuestra documentación en un vistazo</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="bg-white rounded-lg p-6 text-center">
+          <div class="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
+            <span class="text-3xl">📚</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Ejemplos Prácticos</h3>
+          <p class="text-gray-600 mb-4">Código real y casos de uso implementados paso a paso.</p>
+          <a href="/machine-learning/ejemplos" class="text-blue-600 hover:text-blue-800 font-medium">Ver ejemplos →</a>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 text-center">
+          <div class="w-16 h-16 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-4">
+            <span class="text-3xl">🚀</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Técnicas Avanzadas</h3>
+          <p class="text-gray-600 mb-4">RAG, embeddings y desarrollo de chatbots inteligentes.</p>
+          <a href="/nlp/rag" class="text-blue-600 hover:text-blue-800 font-medium">Explorar →</a>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 text-center">
+          <div class="w-16 h-16 mx-auto bg-purple-100 rounded-full flex items-center justify-center mb-4">
+            <span class="text-3xl">🔧</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Implementación</h3>
+          <p class="text-gray-600 mb-4">Integración de ML en software y mejores prácticas.</p>
+          <a href="/machine-learning/integracion-en-software" class="text-blue-600 hover:text-blue-800 font-medium">Aprender →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
+        <h2 class="text-3xl font-bold mb-8">Contenido Completo</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div>
+            <div class="text-4xl font-bold mb-2">15+</div>
+            <div class="text-blue-100">Artículos detallados</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold mb-2">100+</div>
+            <div class="text-blue-100">Ejemplos de código</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold mb-2">4</div>
+            <div class="text-blue-100">Áreas principales</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold mb-2">∞</div>
+            <div class="text-blue-100">Actualizaciones</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

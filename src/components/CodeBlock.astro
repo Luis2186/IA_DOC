@@ -1,0 +1,66 @@
+---
+// CodeBlock component for syntax highlighting
+export interface Props {
+  code: string;
+  language?: string;
+  title?: string;
+}
+
+const { code, language = 'javascript', title } = Astro.props;
+---
+
+<div class="code-block">
+  {title && <div class="code-title">{title}</div>}
+  <pre class={`language-${language}`}><code>{code}</code></pre>
+</div>
+
+<style>
+  .code-block {
+    margin: 1rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e1e5e9;
+  }
+
+  .code-title {
+    background-color: #f6f8fa;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #24292e;
+    border-bottom: 1px solid #e1e5e9;
+  }
+
+  pre {
+    margin: 0;
+    padding: 1rem;
+    background-color: #f6f8fa;
+    overflow-x: auto;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  code {
+    color: #24292e;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  /* Basic syntax highlighting */
+  .language-javascript code,
+  .language-python code,
+  .language-typescript code {
+    color: #0969da;
+  }
+
+  .language-json code {
+    color: #0969da;
+  }
+
+  .language-bash code,
+  .language-shell code {
+    color: #24292e;
+  }
+</style>

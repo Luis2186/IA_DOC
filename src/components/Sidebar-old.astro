@@ -1,0 +1,127 @@
+---
+// Sidebar component for navigation
+export interface Props {
+  currentPath?: string;
+}
+
+const { currentPath } = Astro.props;
+---
+
+<aside class="sidebar">
+  <div class="sidebar-section">
+    <h3>Fundamentos</h3>
+    <ul>
+      <li><a href="/fundamentos/que-es-la-ia" class={currentPath === '/fundamentos/que-es-la-ia' ? 'active' : ''}>¿Qué es la IA?</a></li>
+      <li><a href="/fundamentos/historia" class={currentPath === '/fundamentos/historia' ? 'active' : ''}>Historia</a></li>
+      <li><a href="/fundamentos/ramas" class={currentPath === '/fundamentos/ramas' ? 'active' : ''}>Ramas</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>Machine Learning</h3>
+    <ul>
+      <li><a href="/machine-learning/introduccion" class={currentPath === '/machine-learning/introduccion' ? 'active' : ''}>Introducción</a></li>
+      <li><a href="/machine-learning/ciclo-de-vida" class={currentPath === '/machine-learning/ciclo-de-vida' ? 'active' : ''}>Ciclo de Vida</a></li>
+      <li><a href="/machine-learning/integracion-en-software" class={currentPath === '/machine-learning/integracion-en-software' ? 'active' : ''}>Integración en Software</a></li>
+      <li><a href="/machine-learning/ejemplos" class={currentPath === '/machine-learning/ejemplos' ? 'active' : ''}>Ejemplos</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>Deep Learning</h3>
+    <ul>
+      <li><a href="/deep-learning/arquitecturas" class={currentPath === '/deep-learning/arquitecturas' ? 'active' : ''}>Arquitecturas</a></li>
+      <li><a href="/deep-learning/transformers" class={currentPath === '/deep-learning/transformers' ? 'active' : ''}>Transformers</a></li>
+      <li><a href="/deep-learning/llms" class={currentPath === '/deep-learning/llms' ? 'active' : ''}>LLMs</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>NLP</h3>
+    <ul>
+      <li><a href="/nlp/introduccion" class={currentPath === '/nlp/introduccion' ? 'active' : ''}>Introducción</a></li>
+      <li><a href="/nlp/embeddings" class={currentPath === '/nlp/embeddings' ? 'active' : ''}>Embeddings</a></li>
+      <li><a href="/nlp/rag" class={currentPath === '/nlp/rag' ? 'active' : ''}>RAG</a></li>
+      <li><a href="/nlp/chatbots" class={currentPath === '/nlp/chatbots' ? 'active' : ''}>Chatbots</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>Casos de Uso</h3>
+    <ul>
+      <li><a href="/casos/generacion-codigo" class={currentPath === '/casos/generacion-codigo' ? 'active' : ''}>Generación de Código</a></li>
+      <li><a href="/casos/copilots" class={currentPath === '/casos/copilots' ? 'active' : ''}>Copilots</a></li>
+      <li><a href="/casos/refactorizacion" class={currentPath === '/casos/refactorizacion' ? 'active' : ''}>Refactorización</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>Herramientas</h3>
+    <ul>
+      <li><a href="/herramientas/overview" class={currentPath === '/herramientas/overview' ? 'active' : ''}>Overview</a></li>
+      <li><a href="/herramientas/langchain" class={currentPath === '/herramientas/langchain' ? 'active' : ''}>LangChain</a></li>
+      <li><a href="/herramientas/huggingface" class={currentPath === '/herramientas/huggingface' ? 'active' : ''}>HuggingFace</a></li>
+      <li><a href="/herramientas/openai" class={currentPath === '/herramientas/openai' ? 'active' : ''}>OpenAI</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>Recursos</h3>
+    <ul>
+      <li><a href="/recursos" class={currentPath === '/recursos' ? 'active' : ''}>Recursos Adicionales</a></li>
+    </ul>
+  </div>
+</aside>
+
+<style>
+  .sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #e9ecef;
+    padding: 1rem;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .sidebar-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .sidebar-section h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .sidebar-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sidebar-section li {
+    margin-bottom: 0.25rem;
+  }
+
+  .sidebar-section a {
+    display: block;
+    padding: 0.5rem;
+    color: #666;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+  }
+
+  .sidebar-section a:hover {
+    background-color: #e9ecef;
+  }
+
+  .sidebar-section a.active {
+    background-color: #007bff;
+    color: white;
+  }
+</style>

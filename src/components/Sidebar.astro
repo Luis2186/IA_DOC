@@ -1,0 +1,240 @@
+---
+// Modern Sidebar component
+export interface Props {
+  currentPath?: string;
+}
+
+const { currentPath } = Astro.props;
+---
+
+<aside class="w-64 bg-white border-r border-primary-200 h-screen overflow-y-auto sticky top-16 shadow-sm">
+  <div class="p-6">
+    <!-- Search Bar -->
+    <div class="mb-8">
+      <div class="relative">
+        <input type="text" 
+               placeholder="Buscar..." 
+               class="w-full pl-10 pr-4 py-2 text-sm bg-primary-50 border border-primary-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all duration-200">
+        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <svg class="w-4 h-4 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-8">
+      
+      <!-- Fundamentos Section -->
+      <div class="sidebar-section">
+        <div class="flex items-center mb-4">
+          <div class="w-6 h-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-md flex items-center justify-center mr-3">
+            <span class="text-white text-xs font-bold">F</span>
+          </div>
+          <h3 class="text-sm font-semibold text-primary-900 uppercase tracking-wide">Fundamentos</h3>
+        </div>
+        <ul class="space-y-1 ml-9">
+          <li>
+            <a href="/fundamentos/que-es-la-ia" 
+               class={`group flex items-center px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                 currentPath === '/fundamentos/que-es-la-ia' 
+                 ? 'bg-gradient-to-r from-accent-500 to-neural-500 text-white shadow-lg' 
+                 : 'text-primary-700 hover:bg-primary-50 hover:text-accent-600'
+               }`}>
+              <span class="mr-2 opacity-60">•</span>
+              ¿Qué es la IA?
+            </a>
+          </li>
+          <li>
+            <a href="/fundamentos/historia" 
+               class={`group flex items-center px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                 currentPath === '/fundamentos/historia' 
+                 ? 'bg-gradient-to-r from-accent-500 to-neural-500 text-white shadow-lg' 
+                 : 'text-primary-700 hover:bg-primary-50 hover:text-accent-600'
+               }`}>
+              <span class="mr-2 opacity-60">•</span>
+              Historia
+            </a>
+          </li>
+          <li>
+            <a href="/fundamentos/ramas" 
+               class={`group flex items-center px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                 currentPath === '/fundamentos/ramas' 
+                 ? 'bg-gradient-to-r from-accent-500 to-neural-500 text-white shadow-lg' 
+                 : 'text-primary-700 hover:bg-primary-50 hover:text-accent-600'
+               }`}>
+              <span class="mr-2 opacity-60">•</span>
+              Ramas
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Machine Learning Section -->
+      <div class="sidebar-section">
+        <div class="flex items-center mb-4">
+          <div class="w-6 h-6 bg-gradient-to-br from-green-500 to-emerald-600 rounded-md flex items-center justify-center mr-3">
+            <span class="text-white text-xs font-bold">ML</span>
+          </div>
+          <h3 class="text-sm font-semibold text-primary-900 uppercase tracking-wide">Machine Learning</h3>
+        </div>
+        <ul class="space-y-1 ml-9">
+          <li>
+            <a href="/machine-learning/introduccion" 
+               class={`group flex items-center px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                 currentPath === '/machine-learning/introduccion' 
+                 ? 'bg-gradient-to-r from-accent-500 to-neural-500 text-white shadow-lg' 
+                 : 'text-primary-700 hover:bg-primary-50 hover:text-accent-600'
+               }`}>
+              <span class="mr-2 opacity-60">•</span>
+              Introducción
+            </a>
+          </li>
+          <li>
+            <a href="/machine-learning/ciclo-de-vida" 
+               class={`group flex items-center px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                 currentPath === '/machine-learning/ciclo-de-vida' 
+                 ? 'bg-gradient-to-r from-accent-500 to-neural-500 text-white shadow-lg' 
+                 : 'text-primary-700 hover:bg-primary-50 hover:text-accent-600'
+               }`}>
+              <span class="mr-2 opacity-60">•</span>
+              Ciclo de Vida
+            </a>
+          </li>
+          <li>
+            <a href="/machine-learning/integracion-en-software" 
+               class={`group flex items-center px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                 currentPath === '/machine-learning/integracion-en-software' 
+                 ? 'bg-gradient-to-r from-accent-500 to-neural-500 text-white shadow-lg' 
+                 : 'text-primary-700 hover:bg-primary-50 hover:text-accent-600'
+               }`}>
+              <span class="mr-2 opacity-60">•</span>
+              Integración
+            </a>
+          </li>
+          <li>
+            <a href="/machine-learning/ejemplos" 
+               class={`group flex items-center px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                 currentPath === '/machine-learning/ejemplos' 
+                 ? 'bg-gradient-to-r from-accent-500 to-neural-500 text-white shadow-lg' 
+                 : 'text-primary-700 hover:bg-primary-50 hover:text-accent-600'
+               }`}>
+              <span class="mr-2 opacity-60">•</span>
+              Ejemplos
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Deep Learning Section -->
+      <div class="sidebar-section">
+        <div class="flex items-center mb-4">
+          <div class="w-6 h-6 bg-gradient-to-br from-purple-500 to-pink-600 rounded-md flex items-center justify-center mr-3">
+            <span class="text-white text-xs font-bold">DL</span>
+          </div>
+          <h3 class="text-sm font-semibold text-primary-900 uppercase tracking-wide">Deep Learning</h3>
+        </div>
+        <ul class="space-y-1 ml-9">
+          <li>
+            <a href="/deep-learning/arquitecturas" 
+               class={`group flex items-center px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                 currentPath === '/deep-learning/arquitecturas' 
+                 ? 'bg-gradient-to-r from-accent-500 to-neural-500 text-white shadow-lg' 
+                 : 'text-primary-700 hover:bg-primary-50 hover:text-accent-600'
+               }`}>
+              <span class="mr-2 opacity-60">•</span>
+              Arquitecturas
+            </a>
+          </li>
+          <li>
+            <a href="/deep-learning/transformers" 
+               class={`group flex items-center px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                 currentPath === '/deep-learning/transformers' 
+                 ? 'bg-gradient-to-r from-accent-500 to-neural-500 text-white shadow-lg' 
+                 : 'text-primary-700 hover:bg-primary-50 hover:text-accent-600'
+               }`}>
+              <span class="mr-2 opacity-60">•</span>
+              Transformers
+            </a>
+          </li>
+          <li>
+            <a href="/deep-learning/llms" 
+               class={`group flex items-center px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                 currentPath === '/deep-learning/llms' 
+                 ? 'bg-gradient-to-r from-accent-500 to-neural-500 text-white shadow-lg' 
+                 : 'text-primary-700 hover:bg-primary-50 hover:text-accent-600'
+               }`}>
+              <span class="mr-2 opacity-60">•</span>
+              LLMs
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- NLP Section -->
+      <div class="sidebar-section">
+        <div class="flex items-center mb-4">
+          <div class="w-6 h-6 bg-gradient-to-br from-orange-500 to-red-500 rounded-md flex items-center justify-center mr-3">
+            <span class="text-white text-xs font-bold">NLP</span>
+          </div>
+          <h3 class="text-sm font-semibold text-primary-900 uppercase tracking-wide">NLP</h3>
+        </div>
+        <ul class="space-y-1 ml-9">
+          <li>
+            <a href="/nlp/introduccion" 
+               class={`group flex items-center px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                 currentPath === '/nlp/introduccion' 
+                 ? 'bg-gradient-to-r from-accent-500 to-neural-500 text-white shadow-lg' 
+                 : 'text-primary-700 hover:bg-primary-50 hover:text-accent-600'
+               }`}>
+              <span class="mr-2 opacity-60">•</span>
+              Introducción
+            </a>
+          </li>
+          <li>
+            <a href="/nlp/embeddings" 
+               class={`group flex items-center px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                 currentPath === '/nlp/embeddings' 
+                 ? 'bg-gradient-to-r from-accent-500 to-neural-500 text-white shadow-lg' 
+                 : 'text-primary-700 hover:bg-primary-50 hover:text-accent-600'
+               }`}>
+              <span class="mr-2 opacity-60">•</span>
+              Embeddings
+            </a>
+          </li>
+          <li>
+            <a href="/nlp/rag" 
+               class={`group flex items-center px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                 currentPath === '/nlp/rag' 
+                 ? 'bg-gradient-to-r from-accent-500 to-neural-500 text-white shadow-lg' 
+                 : 'text-primary-700 hover:bg-primary-50 hover:text-accent-600'
+               }`}>
+              <span class="mr-2 opacity-60">•</span>
+              RAG
+            </a>
+          </li>
+          <li>
+            <a href="/nlp/chatbots" 
+               class={`group flex items-center px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                 currentPath === '/nlp/chatbots' 
+                 ? 'bg-gradient-to-r from-accent-500 to-neural-500 text-white shadow-lg' 
+                 : 'text-primary-700 hover:bg-primary-50 hover:text-accent-600'
+               }`}>
+              <span class="mr-2 opacity-60">•</span>
+              Chatbots
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    
+    <!-- Footer -->
+    <div class="mt-12 pt-6 border-t border-primary-200">
+      <div class="text-center">
+        <p class="text-xs text-primary-500">Documentación IA</p>
+        <p class="text-xs text-primary-400 mt-1">v1.0.0</p>
+      </div>
+    </div>
+  </div>
+</aside>

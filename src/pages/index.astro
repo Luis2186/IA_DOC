@@ -1,11 +1,305 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="Documentación de Inteligencia Artificial" description="Guía completa de IA, Machine Learning, Deep Learning y NLP con ejemplos prácticos">
+  
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-primary-200 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <a href="/" class="flex items-center space-x-2 group">
+            <div class="w-8 h-8 bg-gradient-to-br from-accent-500 to-neural-500 rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-200">
+              <span class="text-white font-bold text-sm">AI</span>
+            </div>
+            <span class="text-xl font-bold bg-gradient-to-r from-primary-900 to-primary-700 bg-clip-text text-transparent">
+              IA Docs
+            </span>
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/fundamentos/que-es-la-ia" class="text-primary-700 hover:text-accent-600 font-medium transition-colors">Fundamentos</a>
+          <a href="/machine-learning/introduccion" class="text-primary-700 hover:text-accent-600 font-medium transition-colors">ML</a>
+          <a href="/deep-learning/arquitecturas" class="text-primary-700 hover:text-accent-600 font-medium transition-colors">DL</a>
+          <a href="/nlp/introduccion" class="text-primary-700 hover:text-accent-600 font-medium transition-colors">NLP</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-16 bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white overflow-hidden relative">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-gradient-to-r from-accent-500/10 to-neural-500/10"></div>
+      <div class="absolute top-0 left-0 w-full h-full opacity-10">
+        <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" stroke-width="0.5"/>
+          </pattern>
+          <rect width="100" height="100" fill="url(#grid)" />
+        </svg>
+      </div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 relative">
+      <div class="text-center">
+        <!-- Main Title -->
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
+          <span class="block">Documentación de</span>
+          <span class="block bg-gradient-to-r from-accent-400 to-neural-400 bg-clip-text text-transparent">
+            Inteligencia Artificial
+          </span>
+        </h1>
+        
+        <!-- Subtitle -->
+        <p class="text-lg md:text-xl lg:text-2xl mb-8 text-primary-200 max-w-4xl mx-auto leading-relaxed">
+          Domina la IA desde los fundamentos hasta las técnicas más avanzadas. 
+          <span class="text-accent-300">Machine Learning</span>, 
+          <span class="text-neural-300">Deep Learning</span> y 
+          <span class="text-accent-300">NLP</span> con ejemplos prácticos.
+        </p>
+        
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <a href="/fundamentos/que-es-la-ia" 
+             class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold rounded-xl hover:from-accent-600 hover:to-accent-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+            <span>Comenzar a Aprender</span>
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+          <a href="/machine-learning/introduccion" 
+             class="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 hover:border-white/50 transition-all duration-200">
+            <span>Explorar ML</span>
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div class="group">
+            <div class="text-3xl font-bold text-accent-300 mb-2 group-hover:scale-110 transition-transform duration-200">15+</div>
+            <div class="text-primary-300 text-sm uppercase tracking-wide">Artículos</div>
+          </div>
+          <div class="group">
+            <div class="text-3xl font-bold text-neural-300 mb-2 group-hover:scale-110 transition-transform duration-200">100+</div>
+            <div class="text-primary-300 text-sm uppercase tracking-wide">Ejemplos</div>
+          </div>
+          <div class="group">
+            <div class="text-3xl font-bold text-accent-300 mb-2 group-hover:scale-110 transition-transform duration-200">4</div>
+            <div class="text-primary-300 text-sm uppercase tracking-wide">Áreas</div>
+          </div>
+          <div class="group">
+            <div class="text-3xl font-bold text-neural-300 mb-2 group-hover:scale-110 transition-transform duration-200">∞</div>
+            <div class="text-primary-300 text-sm uppercase tracking-wide">Actualizaciones</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Topics Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
+          Explora Nuestros <span class="text-accent-600">Temas Principales</span>
+        </h2>
+        <p class="text-lg text-primary-600 max-w-3xl mx-auto">
+          Desde conceptos fundamentales hasta aplicaciones avanzadas, encuentra todo lo que necesitas para dominar la IA
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Fundamentos -->
+        <div class="group bg-white rounded-2xl p-8 border border-primary-100 hover:border-accent-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-primary-900 mb-4">Fundamentos</h3>
+            <p class="text-primary-600 mb-6">Conceptos básicos, historia y ramas principales de la inteligencia artificial</p>
+            <ul class="space-y-2 text-sm text-left">
+              <li><a href="/fundamentos/que-es-la-ia" class="flex items-center text-primary-700 hover:text-accent-600 transition-colors">
+                <span class="w-2 h-2 bg-accent-500 rounded-full mr-3"></span>¿Qué es la IA?
+              </a></li>
+              <li><a href="/fundamentos/historia" class="flex items-center text-primary-700 hover:text-accent-600 transition-colors">
+                <span class="w-2 h-2 bg-accent-500 rounded-full mr-3"></span>Historia de la IA
+              </a></li>
+              <li><a href="/fundamentos/ramas" class="flex items-center text-primary-700 hover:text-accent-600 transition-colors">
+                <span class="w-2 h-2 bg-accent-500 rounded-full mr-3"></span>Ramas principales
+              </a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Machine Learning -->
+        <div class="group bg-white rounded-2xl p-8 border border-primary-100 hover:border-accent-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-primary-900 mb-4">Machine Learning</h3>
+            <p class="text-primary-600 mb-6">Algoritmos de aprendizaje automático, implementación y casos de uso prácticos</p>
+            <ul class="space-y-2 text-sm text-left">
+              <li><a href="/machine-learning/introduccion" class="flex items-center text-primary-700 hover:text-accent-600 transition-colors">
+                <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Introducción
+              </a></li>
+              <li><a href="/machine-learning/ciclo-de-vida" class="flex items-center text-primary-700 hover:text-accent-600 transition-colors">
+                <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Ciclo de vida
+              </a></li>
+              <li><a href="/machine-learning/ejemplos" class="flex items-center text-primary-700 hover:text-accent-600 transition-colors">
+                <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Ejemplos prácticos
+              </a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Deep Learning -->
+        <div class="group bg-white rounded-2xl p-8 border border-primary-100 hover:border-accent-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-primary-900 mb-4">Deep Learning</h3>
+            <p class="text-primary-600 mb-6">Redes neuronales profundas, transformers y modelos de lenguaje grandes</p>
+            <ul class="space-y-2 text-sm text-left">
+              <li><a href="/deep-learning/arquitecturas" class="flex items-center text-primary-700 hover:text-accent-600 transition-colors">
+                <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>Arquitecturas
+              </a></li>
+              <li><a href="/deep-learning/transformers" class="flex items-center text-primary-700 hover:text-accent-600 transition-colors">
+                <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>Transformers
+              </a></li>
+              <li><a href="/deep-learning/llms" class="flex items-center text-primary-700 hover:text-accent-600 transition-colors">
+                <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>LLMs
+              </a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- NLP -->
+        <div class="group bg-white rounded-2xl p-8 border border-primary-100 hover:border-accent-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-primary-900 mb-4">NLP</h3>
+            <p class="text-primary-600 mb-6">Procesamiento de lenguaje natural, embeddings, RAG y desarrollo de chatbots</p>
+            <ul class="space-y-2 text-sm text-left">
+              <li><a href="/nlp/introduccion" class="flex items-center text-primary-700 hover:text-accent-600 transition-colors">
+                <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Introducción
+              </a></li>
+              <li><a href="/nlp/embeddings" class="flex items-center text-primary-700 hover:text-accent-600 transition-colors">
+                <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Embeddings
+              </a></li>
+              <li><a href="/nlp/rag" class="flex items-center text-primary-700 hover:text-accent-600 transition-colors">
+                <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>RAG
+              </a></li>
+              <li><a href="/nlp/chatbots" class="flex items-center text-primary-700 hover:text-accent-600 transition-colors">
+                <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Chatbots
+              </a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 bg-gradient-to-br from-primary-50 to-primary-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
+          <span class="text-accent-600">Contenido</span> de Calidad
+        </h2>
+        <p class="text-lg text-primary-600">Aprende con los mejores recursos y ejemplos prácticos</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="text-center group">
+          <div class="w-20 h-20 mx-auto bg-gradient-to-br from-accent-500 to-accent-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-primary-900 mb-4">Ejemplos Prácticos</h3>
+          <p class="text-primary-600 mb-6">Código real y casos de uso implementados paso a paso con explicaciones detalladas</p>
+          <a href="/machine-learning/ejemplos" class="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium">
+            Ver ejemplos
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-20 h-20 mx-auto bg-gradient-to-br from-neural-500 to-neural-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-primary-900 mb-4">Técnicas Avanzadas</h3>
+          <p class="text-primary-600 mb-6">RAG, embeddings, transformers y desarrollo de chatbots inteligentes</p>
+          <a href="/nlp/rag" class="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium">
+            Explorar
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-20 h-20 mx-auto bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-primary-900 mb-4">Implementación</h3>
+          <p class="text-primary-600 mb-6">Integración de ML en software real y mejores prácticas de desarrollo</p>
+          <a href="/machine-learning/integracion-en-software" class="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium">
+            Aprender
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-primary-900 to-primary-800">
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        ¿Listo para <span class="text-accent-400">Dominar la IA</span>?
+      </h2>
+      <p class="text-xl text-primary-200 mb-8">
+        Comienza tu viaje en el mundo de la inteligencia artificial con nuestra documentación completa
+      </p>
+      <a href="/fundamentos/que-es-la-ia" 
+         class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold rounded-xl hover:from-accent-600 hover:to-accent-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+        <span>Empezar Ahora</span>
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
